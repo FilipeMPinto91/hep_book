@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Book({}) {
+function Book() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
