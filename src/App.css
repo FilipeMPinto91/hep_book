@@ -42,7 +42,7 @@ body {
   }
   
   img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
   }
 
@@ -101,6 +101,7 @@ label {
 .select-link {
   margin-top: 5px;
   margin-left: 35px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,4 +121,17 @@ label {
 
 .select-link:hover {
   background: linear-gradient(#9ba892, #dbe6c4);
+}
+
+.user-info {
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.user-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function User() {
     const [userData, setUserData] = useState(null);
@@ -41,11 +41,12 @@ function User() {
     }
 
     return(
-        <div>
-            <h2>User Information</h2>
-            {userData.data.profile_picture && <img src={userData.data.profile_picture} alt='Profile' />}
+        <div className='user-info'>
+            <h1>User Information</h1>
+            {userData.data.profile_picture && <img className='user-image' src={userData.data.profile_picture} alt='Profile' />}
             <p><strong>Name:</strong> {userData.data.name} </p>
             <p><strong>Email:</strong> {userData.data.email} </p>
+            <Link to='/updateuser' className='select-link'>Update User Info</Link>
         </div>
     )
 }

@@ -34,7 +34,7 @@ function NavigationBar() {
         <nav>
             <ul>
                 <li><Link to='/'>Home</Link></li>
-                <li>{renderLogButton()}</li>
+                <li className='log-button'>{renderLogButton()}</li>
                 <li><Link to='/register'>Register</Link></li>
                 <li>
                     <select onChange={handleSelectChange}>
