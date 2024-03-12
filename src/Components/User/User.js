@@ -15,7 +15,7 @@ function User() {
         }
 
         fetchUserProfile(token);
-    }, []);
+    }, [navigate]);
 
     const fetchUserProfile = async (token) => {
         try {

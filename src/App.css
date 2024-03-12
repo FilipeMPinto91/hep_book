@@ -88,7 +88,8 @@ label {
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  margin: 5px;
+  margin: 10px;
+  padding: 20px;
 }
 
 .individual-book {
@@ -100,7 +101,6 @@ label {
 
 .select-link {
   margin-top: 5px;
-  margin-left: 35px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -134,4 +134,9 @@ label {
   width: 150px;
   height: 150px;
   border-radius: 10%;
+}
+
+.book-image {
+  width: 200px;
+  height: auto;
 }

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 function BookById() {
     const {bookId} = useParams();
     const [book, setBook] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchBook(bookId)
@@ -16,6 +17,10 @@ function BookById() {
         .catch(error => console.error('Error fetching post:', error));
     };
 
+    const handleUpdateBook = () => {
+        navigate(`/updatebook/${bookId}`);
+    };
+
     return (
         <>
             <h1>Book</h1> 
@@ -24,9 +29,10 @@ function BookById() {
                 <>
                     <p><strong>Book Title:</strong> {book.title}</p>
                     <p><strong>Book Year:</strong> {book.year}</p>
-                    <img src={book.book_cover} alt='Book Cover'/>
+                    <img src={book.book_cover} alt='Book Cover' className='book-image'/>
                     <p><strong>Book Description:</strong> {book.description}</p>
                     <br/>
+                    <button onClick={handleUpdateBook}>Update Book</button>
                     <Link to='/Books' className='select-link'>Back</Link>
                 </>
             )}

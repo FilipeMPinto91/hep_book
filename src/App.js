@@ -24,7 +24,7 @@ function App() {
         <Route path='/register' element={<RegisterPage/>} />
         <Route path='/user' element={<User/>} />
         <Route path='/addbook' element={<AddBook/>} />
-        <Route path='/updatebook' element={<UpdateBook/>} />
+        <Route path='/updatebook/:bookId' element={<UpdateBook/>} />
         <Route path='/updateuser' element={<UpdateUser/>} />
       </Routes>
     </Router>

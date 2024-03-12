@@ -40,7 +40,7 @@ function NavigationBar() {
                     <select onChange={handleSelectChange}>
                         <option value="/books">Books</option>
                         <option value="/addbook">Add book</option>
-                        <option value="/updatebook">Update book</option>
+                        {/* <option value="/updatebook">Update book</option> */}
                     </select>
                 </li>
                 <li><Link to='/user'>User</Link></li>

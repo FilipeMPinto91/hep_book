@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 
-function UpdateBook({ token, bookId }) {
+function UpdateBook() {
     const [bookData, setBookData] = useState({
         title: '',
         description: '',
         year: '',
         book_cover: ''
     });
-    const navigate = useNavigate;
+    const token = sessionStorage.getItem('token');
+    const navigate = useNavigate();
+    const {bookId} = useParams();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -36,7 +38,7 @@ function UpdateBook({ token, bookId }) {
                 }
             });
             console.log('Book updated successfully');
-            navigate(`/Books/${bookId}`);
+            navigate(`/books/${bookId}`);
         } catch (error) {
             console.error('Failed to update book:', error);
         }
