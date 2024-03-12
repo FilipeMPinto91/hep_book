@@ -22,15 +22,15 @@ function Book() {
     
     return (
         <div>
-            <h1>Book List</h1>
-            <ul>
+            <h1>Book Collection</h1>
+            <ul className='book-collection'>
                 {books.map(book => (
                     <li key={book.id}>
-                        <h2>{book.title}</h2>
+                        <h3>{book.title}</h3>
                         {/* <p>{book.year}</p>
-                        <p>{book.description}</p>
-                        <img src={book.book_cover} alt='Book Cover'/> */}
-                        <Link to={`/Books/${book.id}`}>Book Details</Link>
+                        <p>{book.description}</p> */}
+                        <img src={book.book_cover} alt='Book Cover'/>
+                        <Link to={`/Books/${book.id}`} className='select-link'>Book Details</Link>
                     </li>
                 ))}
             </ul>

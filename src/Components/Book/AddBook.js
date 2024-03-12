@@ -44,33 +44,36 @@ function AddBook() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="title"
-                value={bookData.title}
-                onChange={handleChange}
-                placeholder="Title"
-                required
-            />
-            <input
-                type="text"
-                name="description"
-                value={bookData.description}
-                onChange={handleChange}
-                placeholder="Description"
-                required
-            />
-            <input
-                type="number"
-                name="year"
-                value={bookData.year}
-                onChange={handleChange}
-                placeholder="Year"
-                required
-            />
-            <button type="submit">Add Book</button>
-        </form>
+        <>
+            <h1>Add new Book</h1>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    name="title"
+                    value={bookData.title}
+                    onChange={handleChange}
+                    placeholder="Title"
+                    required
+                />
+                <input
+                    type="text"
+                    name="description"
+                    value={bookData.description}
+                    onChange={handleChange}
+                    placeholder="Description"
+                    required
+                />
+                <input
+                    type="number"
+                    name="year"
+                    value={bookData.year}
+                    onChange={handleChange}
+                    placeholder="Year"
+                    required
+                />
+                <button type="submit" className='submit-button'>Add Book</button>
+            </form>
+        </>
     );
 }
 

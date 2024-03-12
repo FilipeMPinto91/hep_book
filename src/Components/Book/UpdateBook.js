@@ -43,41 +43,45 @@ function UpdateBook({ token, bookId }) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="title"
-                value={bookData.title}
-                onChange={handleChange}
-                placeholder="Title"
-                required
-            />
-            <input
-                type="text"
-                name="description"
-                value={bookData.description}
-                onChange={handleChange}
-                placeholder="Description"
-                required
-            />
-            <input
-                type="number"
-                name="year"
-                value={bookData.year}
-                onChange={handleChange}
-                placeholder="Year"
-                required
-            />
-            <input
-                type="text"
-                name="book_cover"
-                value={bookData.book_cover}
-                onChange={handleChange}
-                placeholder="Book Cover URL"
-                required
-            />
-            <button type="submit">Update Book</button>
-        </form>
+        <>
+            <h1>Update Book</h1>
+        
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    name="title"
+                    value={bookData.title}
+                    onChange={handleChange}
+                    placeholder="Title"
+                    required
+                />
+                <input
+                    type="text"
+                    name="description"
+                    value={bookData.description}
+                    onChange={handleChange}
+                    placeholder="Description"
+                    required
+                />
+                <input
+                    type="number"
+                    name="year"
+                    value={bookData.year}
+                    onChange={handleChange}
+                    placeholder="Year"
+                    required
+                />
+                <input
+                    type="text"
+                    name="book_cover"
+                    value={bookData.book_cover}
+                    onChange={handleChange}
+                    placeholder="Book Cover URL"
+                    required
+                />
+                <button type="submit" className='submit-button'>Update Book</button>
+            </form>
+        </>
     );
 }
 

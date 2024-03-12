@@ -48,7 +48,76 @@ body {
 
 input {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 5px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  align-self: flex-start;
+}
+
+.submit-button {
+  margin-top: 20px;;
+  font-size:15px;
+  font-family:Arial;
+  width:140px;
+  height:50px;
+  border-width:1px;
+  color:#fff;
+  border-color:#566963;
+  font-weight:bold;
+  border-radius:5px;
+  box-shadow:inset 0px 1px 3px 0px #91b8b3;
+  text-shadow:inset 0px -1px 0px #2b665e;
+  background:linear-gradient(#768d87, #6c7c7c);
+}
+
+.submit-button:hover {
+  background: linear-gradient(#6c7c7c, #768d87);
+}
+
+.book-collection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin: 5px;
+}
+
+.individual-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.select-link {
+  margin-top: 5px;
+  margin-left: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:15px;
+  font-family:Arial;
+  width: 120px;
+  height:30px;
+  border-width:1px;
+  color:#757d6f;
+  border-color:#b2b8ad;
+  font-weight:bold;
+  border-radius:5px;
+  box-shadow:inset 0px 0px 14px -3px #f2fadc;
+  text-shadow:inset 0px 1px 0px #ced9bf;
+  background:linear-gradient(#dbe6c4, #9ba892);
+}
+
+.select-link:hover {
+  background: linear-gradient(#9ba892, #dbe6c4);
 }

@@ -41,7 +41,7 @@ function LoginPage() {
 
     return (
         <div>
-          <h2>Login</h2>
+          <h1>Login</h1>
           <form onSubmit={handleSubmit}>
             <div>
               <label>Email:</label>
@@ -51,7 +51,7 @@ function LoginPage() {
               <label>Password:</label>
               <input type="password" name="password" value={formData.password} onChange={handleChange} />
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" className='submit-button'>Login</button>
           </form>
         </div>
     );

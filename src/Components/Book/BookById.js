@@ -17,18 +17,21 @@ function BookById() {
     };
 
     return (
-        <div>
-        <h1>Book</h1> 
-        { book && (
-            <>
-                <h2>{book.title}</h2>
-                <p>{book.year}</p>
-                <p>{book.description}</p>
-                <img src={book.book_cover} alt='Book Cover'/><br/><br/>
-                <Link to='/Books'>Back</Link>
-            </>
-        )}
-        </div>
+        <>
+            <h1>Book</h1> 
+            <div className='individual-book'>
+            { book && (
+                <>
+                    <p><strong>Book Title:</strong> {book.title}</p>
+                    <p><strong>Book Year:</strong> {book.year}</p>
+                    <img src={book.book_cover} alt='Book Cover'/>
+                    <p><strong>Book Description:</strong> {book.description}</p>
+                    <br/>
+                    <Link to='/Books' className='select-link'>Back</Link>
+                </>
+            )}
+            </div>
+        </>
     );
 }
 

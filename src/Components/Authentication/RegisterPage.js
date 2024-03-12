@@ -35,7 +35,7 @@ function RegisterPage() {
 
     return (
         <div>
-          <h2>Register</h2>
+          <h1>Register</h1>
           <form onSubmit={handleSubmit}>
             <div>
               <label>Email:</label>
@@ -49,7 +49,7 @@ function RegisterPage() {
               <label>Name:</label>
               <input type="text" name="name" value={formData.name} onChange={handleChange} />
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" className='submit-button'>Register</button>
           </form>
         </div>
     );
