@@ -14,12 +14,21 @@ nav {
     display: inline;
     margin-right: 20px;
   }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
+
+  option {
+    background-color: #333;
   }
   
-  a:hover {
+  a, button, select {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+  }
+  
+  a:hover, button:hover, select:hover {
     text-decoration: underline;
   }

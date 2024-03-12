@@ -8,18 +8,22 @@ import RegisterPage from './Components/Authentication/RegisterPage';
 import NavigationBar from './Components/Navigation/NavigationBar';
 import User from './Components/User/User';
 import AddBook from './Components/Book/AddBook';
+import Home from './Components/Home/Home';
+import UpdateBook from './Components/Book/UpdateBook';
 
 function App() { 
   return (
     <Router>
       <NavigationBar />
       <Routes>
+        <Route path='/' element={<Home/>} />
         <Route path='/books' element={<Book/>} />
         <Route path='/books/:bookId' element={<BookById/>}/>
         <Route path='/login' element={<LoginPage/>} />
         <Route path='/register' element={<RegisterPage/>} />
         <Route path='/user' element={<User/>} />
         <Route path='/addbook' element={<AddBook/>} />
+        <Route path='/updatebook' element={<UpdateBook/>} />
       </Routes>
     </Router>
   );

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './NavigationBar.css'
 
-
 function NavigationBar() {
 
     const userData = JSON.parse(sessionStorage.getItem('userData'));
@@ -26,14 +25,24 @@ function NavigationBar() {
         }
     }
 
+    const handleSelectChange = (event) => {
+        const selectedRoute = event.target.value;
+        navigate(selectedRoute);
+    };
+
     return (
         <nav>
             <ul>
                 <li><Link to='/'>Home</Link></li>
                 <li>{renderLogButton()}</li>
                 <li><Link to='/register'>Register</Link></li>
-                <li><Link to='/books'>Book List</Link></li>
-                <li><Link to='/addbook'>Add book</Link></li>
+                <li>
+                    <select onChange={handleSelectChange}>
+                        <option value="/books">Books</option>
+                        <option value="/addbook">Add book</option>
+                        <option value="/updatebook">Update book</option>
+                    </select>
+                </li>
                 <li><Link to='/user'>User</Link></li>
             </ul>
         </nav>

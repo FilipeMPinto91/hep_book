@@ -14,7 +14,9 @@ body {
   
   h1 {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
   }
 
   h2 {
@@ -43,3 +45,10 @@ body {
     max-width: 100%;
     height: auto;
   }
+
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}

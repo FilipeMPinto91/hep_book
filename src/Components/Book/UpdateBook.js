@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-function AddBook() {
+
+function UpdateBook({ token, bookId }) {
     const [bookData, setBookData] = useState({
         title: '',
         description: '',
-        year: ''
+        year: '',
+        book_cover: ''
     });
-
-    const token = sessionStorage.getItem('token');
+    const navigate = useNavigate;
 
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
         setBookData((prevData) => ({
             ...prevData,
             [name]: value
@@ -28,18 +30,15 @@ function AddBook() {
         };
 
         try {
-            await axios.post('http://5.22.217.225:8081/api/v1/book/', newBookData, {
+            await axios.put(`http://5.22.217.225:8081/api/v1/book/${bookId}`, newBookData, {
                 headers: {
                     Authorization: `${token}`
                 }
             });
-            setBookData({
-                title: '',
-                description: '',
-                year: ''
-            });
+            console.log('Book updated successfully');
+            navigate(`/Books/${bookId}`);
         } catch (error) {
-            console.error('Failed to add book:', error);
+            console.error('Failed to update book:', error);
         }
     };
 
@@ -69,9 +68,17 @@ function AddBook() {
                 placeholder="Year"
                 required
             />
-            <button type="submit">Add Book</button>
+            <input
+                type="text"
+                name="book_cover"
+                value={bookData.book_cover}
+                onChange={handleChange}
+                placeholder="Book Cover URL"
+                required
+            />
+            <button type="submit">Update Book</button>
         </form>
     );
 }
 
-export default AddBook;
+export default UpdateBook;
