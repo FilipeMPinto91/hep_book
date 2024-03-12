@@ -9,8 +9,10 @@ function NavigationBar() {
     const navigate = useNavigate();
     
     const handleLogout = () => {
-        sessionStorage.removeItem('userData');
-        sessionStorage.removeItem('token')
+        const confirmLogout = window.confirm('Are you sure you want to logout?');
+        if (confirmLogout) {
+            sessionStorage.clear();
+        }
         
         console.log ('Logged out');
         

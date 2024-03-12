@@ -11,6 +11,7 @@ import AddBook from './Components/Book/AddBook';
 import Home from './Components/Home/Home';
 import UpdateBook from './Components/Book/UpdateBook';
 import UpdateUser from './Components/User/UpdateUser';
+import DeleteBook from './Components/Book/DeleteBook';
 
 function App() { 
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/addbook' element={<AddBook/>} />
         <Route path='/updatebook/:bookId' element={<UpdateBook/>} />
         <Route path='/updateuser' element={<UpdateUser/>} />
+        <Route path='/deletebook' element={<DeleteBook/>} />
       </Routes>
     </Router>
   );

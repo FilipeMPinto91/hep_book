@@ -29,7 +29,7 @@ function Book() {
                         <h3>{book.title}</h3>
                         {/* <p>{book.year}</p>
                         <p>{book.description}</p> */}
-                        <img src={book.book_cover} alt='Book Cover'/>
+                        <img src={book.book_cover} alt='Book Cover' className='books-image'/>
                         <Link to={`/Books/${book.id}`} className='select-link'>Book Details</Link>
                     </li>
                 ))}

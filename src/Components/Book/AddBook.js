@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function AddBook() {
     const [bookData, setBookData] = useState({
@@ -7,7 +8,7 @@ function AddBook() {
         description: '',
         year: ''
     });
-
+    const navigate = useNavigate();
     const token = sessionStorage.getItem('token');
 
     const handleChange = (e) => {
@@ -38,6 +39,7 @@ function AddBook() {
                 description: '',
                 year: ''
             });
+            navigate('/books');
         } catch (error) {
             console.error('Failed to add book:', error);
         }

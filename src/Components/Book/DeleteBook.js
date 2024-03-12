@@ -8,16 +8,19 @@ function DeleteBook() {
     const {bookId} = useParams();
 
     const handleDelete = async () => {
-        try {
-            await axios.delete(`http://5.22.217.225:8081/api/v1/book/${bookId}`, {
-                headers: {
-                    Authorization: `${token}`
-                }
-            });
-            console.log('Book deleted successfully');
-            navigate('/books');
-        } catch (error) {
-            console.error('Failed to delete book:', error);
+        const confirmDelete = window.confirm('Are you sure you want to delete this book?');
+        if (confirmDelete) {
+            try {
+                await axios.delete(`http://5.22.217.225:8081/api/v1/book/${bookId}`, {
+                    headers: {
+                        Authorization: `${token}`
+                    }
+                });
+                console.log('Book deleted successfully');
+                navigate('/books');
+            } catch (error) {
+                console.error('Failed to delete book:', error);
+            }
         }
     };
 
