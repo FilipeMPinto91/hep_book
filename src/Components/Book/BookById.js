@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import DeleteBook from './DeleteBook';
 
 function BookById() {
     const {bookId} = useParams();
@@ -32,7 +33,8 @@ function BookById() {
                     <img src={book.book_cover} alt='Book Cover' className='book-image'/>
                     <p><strong>Book Description:</strong> {book.description}</p>
                     <br/>
-                    <button onClick={handleUpdateBook}>Update Book</button>
+                    <DeleteBook></DeleteBook>
+                    <button onClick={handleUpdateBook} className='update-book-button'>Update Book</button>
                     <Link to='/Books' className='select-link'>Back</Link>
                 </>
             )}

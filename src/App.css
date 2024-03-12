@@ -62,7 +62,7 @@ label {
   align-self: flex-start;
 }
 
-.submit-button {
+.submit-button, .update-book-button, .delete-book-button {
   margin-top: 20px;;
   font-size:15px;
   font-family:Arial;
@@ -78,7 +78,7 @@ label {
   background:linear-gradient(#768d87, #6c7c7c);
 }
 
-.submit-button:hover {
+.submit-button:hover, .update-book-button:hover, .delete-book-button:hover {
   background: linear-gradient(#6c7c7c, #768d87);
 }
 
@@ -139,4 +139,16 @@ label {
 .book-image {
   width: 200px;
   height: auto;
+}
+
+.update-book-button {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+}
+
+.delete-book-button {
+  position: absolute;
+  top: 8%;
+  right: 5%;
 }
